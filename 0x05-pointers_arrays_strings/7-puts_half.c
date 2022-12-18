@@ -3,16 +3,18 @@
 /**
  * puts_half-prints half of a string
  * _putchar-prints to stdout
- * length_of_string-calculates the length of strin
  * @str: string to be printed
  */
 void puts_half(char *str)
 {
-	int length;
+	int length = 0;
 	int n;
 	int i;
 
-	length = length_of_string(str);
+	for (i = 0; *(str + i) != '\0'; i++)
+	{
+		length++;
+	}
 	if (length % 2 != 0)
 	{
 		n = (length - 1) / 2;
