@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 
 /**
@@ -15,9 +16,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			break;
+			return (&s[i]);
 		}
 		i++;
 	}
-	return (&s[i]);
+	return ('\0');
 }
