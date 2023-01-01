@@ -30,17 +30,17 @@ char *_strstr(char *haystack, char *needle)
 	}
 	else if (status == 0)
 	{
-		i = 1;
+		i = 0;
 
-		while (needle[i] != '\0')
+		while (needle[i] != '\0' && needle[i] == haystack[j])
 		{
 			j += 1;
-			if (needle[i] != haystack[j])
-			{
-				return ('\0');
-			}
 			i++;
 		}
+		if (!needle[i])
+		{
+			return (&haystack[new_j]);
+		}
 	}
-	return (&haystack[new_j]);
+	return ('\0');
 }
