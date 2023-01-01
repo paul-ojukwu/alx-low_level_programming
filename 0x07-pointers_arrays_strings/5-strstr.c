@@ -8,15 +8,15 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	/*int i;
+	int i;
 	int j;
 	int status = 1;
 	int new_j;
 
 	j = 0;
-	while (haystack[j])
+	while (haystack[j] != '\0')
 	{
-		if (needle[0] == haystack[j])
+		if (needle[0] == haystack[j] && haystack[j] != '\0')
 		{
 			new_j = j;
 			status = 0;
@@ -32,7 +32,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		i = 1;
 
-		while (needle[i])
+		while (needle[i] != '\0')
 		{
 			new_j += 1;
 			if (needle[i] != haystack[new_j])
@@ -43,21 +43,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		return (needle);
 	}
-	return (0);*/
-	char *h, *n;
-
-	while (*haystack != '\0')
-	{
-		h = haystack;
-		n = needle;
-		while (*n != '\0' && *haystack == *n)
-		{
-			haystack++;
-			n++;
-		}
-		if (!*n)
-			return (h);
-		haystack++;
-	}
-	return ('\0');
+	return (0);
 }
