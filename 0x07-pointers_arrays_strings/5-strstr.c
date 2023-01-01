@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (status == 1)
 	{
-		return ("\0");
+		return ('\0');
 	}
 	else if (status == 0)
 	{
@@ -37,7 +37,7 @@ char *_strstr(char *haystack, char *needle)
 			new_j += 1;
 			if (needle[i] != haystack[new_j])
 			{
-				return ("\0");
+				return ('\0');
 			}
 			i++;
 		}
