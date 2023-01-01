@@ -12,9 +12,7 @@ char *_strstr(char *haystack, char *needle)
 	int j;
 	int status = 1;
 	int new_j;
-	char *n;
 
-	n = needle;
 	j = 0;
 	while (haystack[j] != '\0')
 	{
@@ -36,14 +34,14 @@ char *_strstr(char *haystack, char *needle)
 
 		while (needle[i] != '\0')
 		{
-			new_j += 1;
-			if (needle[i] != haystack[new_j])
+			j += 1;
+			if (needle[i] != haystack[j])
 			{
 				return ('\0');
 			}
 			i++;
 		}
-		return (n);
+		return (&haystack[new_j]);
 	}
 	return (0);
 }
