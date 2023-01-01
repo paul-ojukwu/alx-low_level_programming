@@ -13,8 +13,8 @@ char *_strstr(char *haystack, char *needle)
 	int status = 1;
 	int new_j;
 	char *n;
-	n = needle;
 
+	n = needle;
 	j = 0;
 	while (haystack[j] != '\0')
 	{
