@@ -9,15 +9,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int cent = atoi(argv[1]);
-	int coins[5] = {25, 10, 5, 2, 1};
+	int cent;
 	int i, ans, rem;
-
+	int coins[5] = {25, 10, 5, 2, 1};
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	cent = atoi(argv[1]);
 	i = 0;
 	while (coins[i])
 	{
