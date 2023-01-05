@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 	
 	if (argc < 3)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
-	a = (int) argv[1];
-	b = (int) argv[2];
+	a = (int)(*argv[1]) - 48;
+	b = (int)(*argv[2]) - 48;
 	c = a * b;
 	printf("%d\n", c);
 	return (0);
